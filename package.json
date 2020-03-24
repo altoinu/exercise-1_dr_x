@@ -1,0 +1,14 @@
+{
+  "name": "exercise-1_dr_x",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/sortText.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Kaoru Kawashima",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  }
+}
