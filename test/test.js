@@ -12,7 +12,7 @@ describe('Array', function () {
 */
 
 describe('getLettersSorted', () => {
-	it('should return text', () => {
-		assert.equal(getLettersSorted('John Smith'), 'hello John Smith');
+	it('should return text without punctuation and in lower case', () => {
+		assert.equal(getLettersSorted('John, Smith!'), 'hello johnsmith');
 	});
 });
