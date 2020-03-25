@@ -6,7 +6,11 @@ function randRange(min, max) {
 
 function split(text) {
 
-	// using random char as pivot
+	// *** using middle char as pivot
+	// var pivotIndex = Math.floor(text.length / 2);
+	// *** using last char as pivot
+	// var pivotIndex = text.length - 1;
+	// *** using random char as pivot
 	var pivotIndex = randRange(0, text.length);
 	var pivot = text.charAt(pivotIndex);
 

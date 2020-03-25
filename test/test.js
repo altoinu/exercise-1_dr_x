@@ -25,6 +25,15 @@ describe('getLettersSorted', () => {
 	});
 });
 
+describe('getLettersSorted (alphabet in order). Best case if pivot in quicksort is middle char and splitting always gives equal number of letters in before and after', () => {
+	it('should return letters, without punctuation and in lower case, sorted alphabetically', () => {
+		assert.equal(
+			getLettersSorted('abcdefghijklmnopqrstuvwxyz'),
+			'abcdefghijklmnopqrstuvwxyz'
+		);
+	});
+});
+
 describe('getLettersSorted (sorted in reverse order). Worst case if pivot in quicksort is either first or last char', () => {
 	it('should return letters, without punctuation and in lower case, sorted alphabetically', () => {
 		assert.equal(
