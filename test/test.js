@@ -24,3 +24,21 @@ describe('getLettersSorted', () => {
 		);
 	});
 });
+
+describe('getLettersSorted, worst case (sorted in reverse order)', () => {
+	it('should return letters, without punctuation and in lower case, sorted alphabetically', () => {
+		assert.equal(
+			getLettersSorted('zyxwvutsrqponmlkjihgfedcba'),
+			'abcdefghijklmnopqrstuvwxyz'
+		);
+	});
+});
+
+describe('getLettersSorted, worst case (repeating letters)', () => {
+	it('should return letters, without punctuation and in lower case, sorted alphabetically', () => {
+		assert.equal(
+			getLettersSorted('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'),
+			'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+		);
+	});
+});
