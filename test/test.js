@@ -15,3 +15,12 @@ describe('getLettersSorted', () => {
 		);
 	});
 });
+
+describe('getLettersSorted', () => {
+	it('should return letters, without punctuation and in lower case, sorted alphabetically', () => {
+		assert.equal(
+			getLettersSorted('I really like curry rice. I mean a lot!'),
+			'aaacceeeeiiiikllllmnorrrrtuyy'
+		);
+	});
+});
