@@ -1,20 +1,31 @@
+function randRange(min, max) {
+
+	return Math.floor(Math.random() * (max - min)) + min;
+
+}
+
 function split(text) {
 
-	// using last char as pivot
-	var pivot = text.charAt(text.length - 1);
+	// using random char as pivot
+	var pivotIndex = randRange(0, text.length);
+	var pivot = text.charAt(pivotIndex);
 
 	// check each letter and put separate to ones before and after pivot 
 	var before = [];
 	var after = [];
 
-	for (var i = 0; i < text.length - 1; i++) {
+	for (var i = 0; i <= text.length - 1; i++) {
 
-		let targetChar = text.charAt(i);
+		if (i != pivotIndex) {
 
-		if (targetChar <= pivot)
-			before.push(targetChar);
-		else
-			after.push(targetChar);
+			let targetChar = text.charAt(i);
+
+			if (targetChar <= pivot)
+				before.push(targetChar);
+			else
+				after.push(targetChar);
+
+		}
 
 	}
 
