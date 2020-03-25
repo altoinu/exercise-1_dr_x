@@ -25,7 +25,7 @@ describe('getLettersSorted', () => {
 	});
 });
 
-describe('getLettersSorted, worst case (sorted in reverse order)', () => {
+describe('getLettersSorted (sorted in reverse order). Worst case if pivot in quicksort is either first or last char', () => {
 	it('should return letters, without punctuation and in lower case, sorted alphabetically', () => {
 		assert.equal(
 			getLettersSorted('zyxwvutsrqponmlkjihgfedcba'),
@@ -34,7 +34,7 @@ describe('getLettersSorted, worst case (sorted in reverse order)', () => {
 	});
 });
 
-describe('getLettersSorted, worst case (repeating letters)', () => {
+describe('getLettersSorted (repeating letters). Worst case if pivot in quicksort is either first or last char', () => {
 	it('should return letters, without punctuation and in lower case, sorted alphabetically', () => {
 		assert.equal(
 			getLettersSorted('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'),
